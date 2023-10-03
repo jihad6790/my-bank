@@ -17,17 +17,4 @@ depositBtn.addEventListener('click', function(){
 })
 
 
-withdrawBtn.addEventListener('click', function(){
-  let withdrawAmout = parseFloat(withdrawInput.value)
-  if(newBalance < withdrawAmout){
-    alert('Your balance is too low')
-  }else{
-    newBalance -= withdrawAmout
-    document.getElementById('balance-total').innerText = newBalance
-    let previousWithdrawAmount =  parseFloat(document.getElementById('withdraw-total').innerText);
-    let currentWithdrawAmount = previousWithdrawAmount + withdrawAmout
-    document.getElementById('withdraw-total').innerText = currentWithdrawAmount
-    
-  }
 
-})
